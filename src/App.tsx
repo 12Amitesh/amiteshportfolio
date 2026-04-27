@@ -1,6 +1,5 @@
 import './App.css'
-import BirthdayPage from  "./ram.js"
-import CloudinaryPlayer from  "./cloudinary/videoplayer.js"
+
 import Portfolio from './ram.js'
 function App() {
  
