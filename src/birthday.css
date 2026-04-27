@@ -1,0 +1,81 @@
+.page {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+.page.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  background: rgba(12,6,3,.78);
+  padding: 2.5rem 3rem;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.btn {
+  padding: .6rem 1.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(240,192,96,.3), rgba(244,114,182,.2));
+  cursor: pointer;
+}
+
+.nav-dots {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #aaa;
+}
+.dot.active {
+  width: 25px;
+  background: gold;
+  border-radius: 5px;
+}
+
+.cursor {
+  width: 2px;
+  height: 1em;
+  background: gold;
+  display: inline-block;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.balloon {
+  position: absolute;
+  bottom: 19%;
+  animation: balloonFloat 4s infinite ease-in-out;
+}
+@keyframes balloonFloat {
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+}
+@keyframes balloonPop {
+  100%{transform:scale(0);opacity:0}
+}
+
+.sparkle {
+  position: fixed;
+  animation: sparkleAnim .6s forwards;
+}
+@keyframes sparkleAnim {
+  0%{transform:scale(0)}
+  100%{transform:scale(1.5);opacity:0}
+}
